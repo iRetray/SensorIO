@@ -1,0 +1,74 @@
+.LateralNavContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 30px;
+  height: calc(100vh - 30px);
+  background: $blueDark;
+  width: 230px;
+  .nameAppContainer {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    .chipImage {
+      height: 45px;
+    }
+    .nameApp {
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+      font-family: "Montserrat", sans-serif !important;
+      font-size: 30px;
+      font-weight: 400;
+      color: #fff;
+      margin-left: 10px;
+    }
+    .subtitle {
+      font-size: 12px;
+      margin-left: 10px;
+      color: #e5e5e5;
+    }
+  }
+  .devicesContainer {
+    margin-top: 30px;
+    .titleDevices {
+      color: #e5e5e5;
+      font-weight: bolder;
+    }
+    .devicesSection {
+      margin-top: 15px;
+      margin-left: 10px;
+      .deviceItem {
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .icon {
+          padding-right: 5px;
+        }
+        .nameItem {
+          inline-size: -webkit-fill-available;
+          margin-left: 10px;
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .versionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bolder;
+    color: #fff;
+    .version {
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .githubLink {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,7 +1,21 @@
-import React from "react";
+import React, { Fragment } from "react";
+
+import LateralNav from "./components/LateralNav";
+import HeaderModule from "./components/HeaderModule";
+import ModulePage from "./components/ModulePage";
 
 function SensorIO() {
-  return <div className="App">Hello</div>;
+  return (
+    <Fragment>
+      <div className="MainContainer">
+        <LateralNav />
+        <div className="ModuleMainSection">
+          <HeaderModule />
+          <ModulePage />
+        </div>
+      </div>
+    </Fragment>
+  );
 }
 
 export default SensorIO;
