@@ -1,17 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 import LateralNav from "./components/LateralNav";
-import HeaderModule from "./components/HeaderModule";
 import ModulePage from "./components/ModulePage";
 
 function SensorIO() {
+  const [currentModule, setCurrentModule] = useState("GROUND");
+
   return (
     <Fragment>
       <div className="MainContainer">
-        <LateralNav />
+        <LateralNav setCurrentModule={setCurrentModule} />
         <div className="ModuleMainSection">
-          <HeaderModule />
-          <ModulePage />
+          <ModulePage currentModule={currentModule} />
         </div>
       </div>
     </Fragment>

@@ -7,15 +7,14 @@ import { TiWaves } from "react-icons/ti";
 
 import chipIcon from "../assets/chipBlue.png";
 
-// eslint-disable-next-line react/prop-types
-const DeviceItem = ({ name, icon }) => (
-  <div className="deviceItem">
+const DeviceItem = ({ name, icon, switchToModule }) => (
+  <div className="deviceItem" onClick={switchToModule}>
     <div className="icon">{icon}</div>
     <p className="nameItem">{name}</p>
   </div>
 );
 
-const LateralNav = () => {
+const LateralNav = ({ setCurrentModule }) => {
   const goToRepo = () => {
     window.open("https://github.com/iRetray/SensorIO", "_blank");
   };
@@ -37,9 +36,18 @@ const LateralNav = () => {
               <DeviceItem
                 name="Humedad del suelo"
                 icon={<GiGroundSprout size={20} />}
+                switchToModule={() => setCurrentModule("GROUND")}
               />
-              <DeviceItem name="Nivel del agua" icon={<IoWater size={20} />} />
-              <DeviceItem name="Calidad de aire" icon={<TiWaves size={20} />} />
+              <DeviceItem
+                name="Nivel del agua"
+                icon={<IoWater size={20} />}
+                switchToModule={() => setCurrentModule("WATER")}
+              />
+              <DeviceItem
+                name="Calidad de aire"
+                icon={<TiWaves size={20} />}
+                switchToModule={() => setCurrentModule("AIR")}
+              />
             </div>
           </div>
         </div>

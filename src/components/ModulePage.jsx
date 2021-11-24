@@ -1,7 +1,19 @@
 import React, { Fragment } from "react";
 
-const ModulePage = () => {
-  return <Fragment></Fragment>;
+import { Ground, Water, Air } from "./sensorComponents";
+
+const ModulePage = ({ currentModule }) => {
+  return (
+    <Fragment>
+      {currentModule === "GROUND" ? (
+        <Ground />
+      ) : currentModule === "WATER" ? (
+        <Water />
+      ) : (
+        <Air />
+      )}
+    </Fragment>
+  );
 };
 
 export default ModulePage;
