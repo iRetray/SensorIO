@@ -116,7 +116,9 @@ export const Water = () => {
             </div>
           </div>
         </div>
-        <Line options={graphData.options} data={graphData.data} />
+        <div style={{ maxWidth: "1000px", margin: "auto" }}>
+          <Line options={graphData.options} data={graphData.data} />
+        </div>
       </div>
     </Fragment>
   );
