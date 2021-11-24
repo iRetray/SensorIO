@@ -96,7 +96,7 @@ export const Ground = () => {
             <p className="title">Sensor de humedad del suelo</p>
             <div className="specs">
               <p className="code">
-                <strong>Codigo de sensor:</strong> HTXHS98
+                <strong>Codigo de sensor:</strong> FC-28
               </p>
               <p className="description">
                 El Sensor de humedad de Suelo FC-28 permite medir de forma
