@@ -54,10 +54,14 @@ const LateralNav = ({ setCurrentModule }) => {
 
         <div className="versionContainer">
           <div>
-            <p>Version de desarrollo</p>
-            <p className="version">Sensor.io V 0.1.0 Alpha</p>
+            <p>Version de producción</p>
+            <p className="version">Sensor.io V 2.8.3</p>
           </div>
-          <div className="githubLink" onClick={goToRepo}>
+          <div
+            className="githubLink"
+            onClick={goToRepo}
+            style={{ padding: "10px" }}
+          >
             <AiOutlineGithub size={30} />
           </div>
         </div>
